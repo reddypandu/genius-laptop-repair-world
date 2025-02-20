@@ -98,10 +98,30 @@
                 items:1
             },
             768:{
-                items:2
+                items:1
             },
             992:{
-                items:3
+                items:1
+            }
+        }
+    });
+    $(".services-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        center: true,
+        margin: 25,
+        dots: true,
+        loop: true,
+        nav : false,
+        responsive: {
+            0:{
+                items:1
+            },
+            768:{
+                items:1
+            },
+            992:{
+                items:4
             }
         }
     });
