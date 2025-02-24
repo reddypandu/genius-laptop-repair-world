@@ -175,6 +175,60 @@
     height: 3rem;
 }
 
+.faq {
+    /* max-width: 600px; */
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.faq h1,
+.faq h2 {
+    text-align: center;
+}
+
+.faq h1 {
+    color: var(--primary);
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #eee;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #dddddd51;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background-color: #e5e2e230;
+    padding: 0 15px;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+
 @media (max-width: 768px) {
     #header-carousel .carousel-item {
         position: relative;

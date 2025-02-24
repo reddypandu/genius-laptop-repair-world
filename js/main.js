@@ -83,7 +83,24 @@
         format: 'LT'
     });
 
-
+    $(document).ready(function () {
+        $('.faq-question').on('click', function () {
+            var $answer = $(this).next();
+            var $icon = $(this).find('.fa-plus, .fa-minus');
+    
+            if ($answer.css('max-height') !== '0px' && $answer.css('max-height') !== 'none') {
+                $answer.css('max-height', '');
+                $icon.removeClass('fa-minus').addClass('fa-plus');
+            } else {
+                $('.faq-question').next().css('max-height', '');
+                $('.faq-question').find('.fa-plus, .fa-minus').removeClass('fa-minus').addClass('fa-plus');
+    
+                $answer.css('max-height', $answer.prop('scrollHeight') + 'px');
+                $icon.removeClass('fa-plus').addClass('fa-minus');
+            }
+        });
+    });
+    
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
