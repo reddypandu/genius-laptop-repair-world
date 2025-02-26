@@ -199,7 +199,14 @@
   background-size: 300px 300px;
   box-shadow: inset 0 3px 7px rgba(255,255,255,0.5);
 }
-
+/* .screen::before{
+    content: 'GENIUS LAPTOP REPAIR WORLD';
+    display: flex;
+    justify-self: center;
+    align-items: center;
+  
+    color: var(--primary);
+} */
 .screen .logo {
   position: absolute;
   width: 20px;
@@ -237,7 +244,7 @@
   width: 130px;
   height: 74px;
   margin: 10px;
-  background-color: #000;
+  background-color: #fff;
   background-size: 100% 100%;
   border-radius: 1px;
   position: relative;
@@ -255,13 +262,17 @@
   background-size: 300px 200px;
   background-position: 0px 0px;
 }
-.screen .face-one .display .shade::before{
-    content: 'GENIUS LAPTOP REPAIR WORLD';
+.screen .face-one .display .shade::before {
+    content: "";
     display: flex;
-    justify-self: center;
+    justify-content: center;
     align-items: center;
-    color: var(--primary);
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    background: url('./img/logo/logo-transt.png') no-repeat center center;
+    background-size: contain; /* Ensures the image fits within the dimensions */
 }
+
 .screen .face-one span {
   position: absolute;
   top: 85px;
@@ -624,7 +635,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-light p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4">
-            <img src="img/logo/logo-transt.png" alt="Best Laptop Repair Services In Hyderabad" class="logo" >
+            <img src="img/logo/logo.png" alt="Best Laptop Repair Services In Hyderabad" class="logo" >
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -748,24 +759,27 @@ display: block;
         display: none;
     }
     .logo{
-        width: 130px;
+        width: 100px;
+        box-shadow:inset 40px 40px 80px white;
     }
     .navbar{
         position: fixed;
         top:0px !important;
         z-index: 999;
         width: 100%;
-        height: 120px;
+        height: 100px;
     }
     .navbar-light.sticky-top{
-        /* height: 120px; */
+       
     }
     .navbar.act{
         top: 0 !important;
         background: white;
+        height: 100px !important;
     }
-    .nav-link.act .logo{
-/* width: 100px !important; */
+    .navbar.act .logo{
+height: 100px !important;
+object-fit: scale-down;
     }
     #header-carousel{
         /* position: absolute;
